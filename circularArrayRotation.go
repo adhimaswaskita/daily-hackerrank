@@ -29,8 +29,7 @@ func rotator(payload string, arrValue string) ([]int, error) {
 			responseArray = append(responseArray, convertedArrValueDataset[x])
 		}
 		responseArray = append([]int{convertedArrValueDataset[len(convertedArrValueDataset)-1]}, responseArray...)
-		convertedArrValueDataset = responseArray[:3]
-		fmt.Println(convertedArrValueDataset)
+		convertedArrValueDataset = responseArray[:len(convertedArrValueDataset)]
 	}
 
 	indexToShow := make([]int, queryPayload)
